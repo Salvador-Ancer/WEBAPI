@@ -12,7 +12,4 @@ export const hash = (password, salt) => {
     const hashing = crypto.createHash("sha512")
     const hashed = hashing.update(salt+password+pepper).digest("base64url")
     return salt + hashed
-
-
-
 }
